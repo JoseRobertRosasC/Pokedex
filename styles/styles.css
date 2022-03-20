@@ -1,0 +1,284 @@
+/*Proyecto "Pokedex" desarrollado por Robert Rosas*/
+
+/*Ajustes para nuestro body*/
+body{
+    background-color: #96172a;
+    width: 100%;
+    max-width: 1320px;
+    min-width: 1320px;
+}
+
+/*Tamaño de nuestra etiqueta input*/
+input {
+    width: 96%;
+    height: 45px;
+    border-radius: 7px;
+}
+
+/*Tamaño y diseño del contenedor General*/
+.container{
+    position: relative;
+    background-color: #b01332 ;
+    margin: 0 auto;
+    width: 70%;
+    margin-top: 50px;
+    height: 520px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 0px rgb(31, 29, 29);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    z-index: 20;
+}
+
+/*Tamaño y diseño del contenedor del buscador*/
+.search{
+    position: absolute;
+    width: 185px;
+    height: 50px;
+    top: 330px;
+    left: 165px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+/*Centramos el contenido del search*/
+.inputCenter{ 
+    position: absolute;
+    text-align: center;
+    width: 96%;
+    top: 0px;
+    left: 0px;
+    background-color: #dcdcdb;
+}
+
+/*Tamaño y diseño del contenedor de title*/
+.title{
+    position: relative;
+    background-color: #dcdcdb;
+    width: 300px;
+    height: 50px;
+    top: 50px;
+    left: 50px;
+    border-radius: 7px;
+    
+}
+
+/*Centramos el contenido de title*/
+.titleCenter{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    top: 15px;
+}
+
+/*Tamaño y diseño del contenedor en donde estarán las imágenes*/
+.picture{
+    position: relative;
+    background-color: #31bbc0;
+    width: 300px;
+    height: 200px;
+    top: 55px;
+    left: 50px;
+    border-radius: 7px;
+    border: 1px solid black;
+    
+}
+
+/*Sombreado para el contenedor picture*/
+.picture::before {
+    content: '';
+    background: radial-gradient(black 33%, transparent 33%);
+    background-size: 3px 3px;
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: -1;
+}
+
+/*Tamaño para la imágen*/
+.poke-img {
+    position: relative;
+    width: 180px;
+    border-radius: 50%;
+    
+}
+
+/*Tamaño y posición de la imagen del pokemon */
+.img-container {
+    position: relative;
+    width: 180px;
+    margin: 10px auto;
+    top: 12px;
+}
+
+/*Contenedor para almacenar el id del pokemon*/
+.number{
+    position:absolute;
+    background-color: #dcdcdb;
+    width: 100px;
+    height: 50px;
+    top: 330px;
+    left: 50px;
+    border-radius: 7px;
+}
+
+/*Centramos el contenido del id*/
+.numberCenter{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    top: 15px;
+    background-color: #dcdcdb;
+}
+
+/*Ajustes del contenedor para los botones*/
+.buttons{
+    position: relative;
+    background-color: rgba(238, 255, 0, 0.918);
+    box-shadow: 0px 0px 7px 0px rgb(31, 29, 29);
+    width: 300px;
+    height: 80px;
+    top: 135px;
+    left: 50px;
+    border-radius: 7px;
+}
+
+/*Ajustes para el boton izquierda*/
+.left{
+    position: relative;
+    width: 70px;
+    height: auto;
+    left: 50px;
+    top: 5px;
+}
+
+/*Ajuestes para el boton del lado derecho*/
+.right{
+    position: relative;
+    width: 70px;
+    height: auto;
+    left: 110px;
+    top: 5px;
+}
+
+/*Quitamos la decoración del los links de los botones*/
+a{
+    text-decoration: none;
+}
+
+
+/*Segundo contenedor para la segunda sección del pokedex*/
+.container2{
+    position: relative;
+    background-color: #96172a;
+    box-shadow: 0px 0px 5px 0px rgb(31, 29, 29);
+    width: 470px;
+    height: 425px;
+    bottom: 290px;
+    left: 410px;
+    border-radius: 7px;
+}
+
+/*Contenedor para el subtítulo type*/
+.subType{
+    position: relative;
+    background-color:  #b9b8b7 ;
+    width: 440px;
+    height: 20px;
+    top: 15px;
+    left: 15px;
+    border-radius: 7px 7px 0px 0px;
+    
+}
+
+/*Ajustes para el contenedor del los datos del type*/
+.type{
+    position: relative;
+    background-color:  #b9b8b7 ;
+    width: 440px;
+    height: 70px;
+    top: 15px;
+    left: 15px;
+    border-radius: 0px 0px 7px 7px;
+}
+
+/*Centramos el contenido del contenedor type*/
+.typeCenter{ 
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 10px;
+    left: 0px;
+}
+
+/*Contenedor para el subtítulo de Statistics*/
+.subStatistics{
+    position: relative;
+    background-color: #dcdcdb;
+    width: 215px;
+    height: 20px;
+    top: 25px;
+    left: 15px;
+    border-radius: 7px 7px 0px 0px;
+}
+
+/*Contenedor para el subtítulo de Movements*/
+.subMovements{
+    position: relative;
+    background-color: #dcdcdb;
+    width: 215px;
+    height: 20px;
+    top: 5px;
+    left: 240px;
+    border-radius: 7px 7px 0px 0px;
+}
+
+/*Centramos todo el texto en los parrafos*/
+p{
+    position: relative;
+    margin: 0%;
+    width: 100%;
+    text-align: center;
+}
+
+/*Ajustes de diseño para el contenedor de Statistics*/
+.statistics{
+    position: relative;
+    background-color: #dcdcdb;
+    width: 215px;
+    height: 275px;
+    top: 5px;
+    left: 15px;
+    border-radius: 0px 0px 7px 7px;
+}
+
+/*Alineamos el contenido del contenedor Statistics*/
+.alignStatistics div{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    padding: 6px;
+}
+
+/*Contenedor para el contenido movements*/
+.movements{
+    position: relative;
+    background-color: #dcdcdb;
+    width: 215px;
+    height: 275px;
+    bottom:270px;
+    left: 240px;
+    border-radius: 0px 0px 7px 7px;
+    overflow: auto;
+}
+
+/*Alineamos el contenido del contenedor movements*/
+.alignMovements div{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    padding: 2px;
+}

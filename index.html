@@ -1,0 +1,91 @@
+<!--Proyecto "Pokedex" desarrollado por Robert Rosas"-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <!--Importación de fuente-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <!--Importación de hoja de estilos y javascript-->
+    <script src="./scripts/script.js" type="text/javascript" defer></script>
+    <link href="./styles/styles.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+    <!--Contenedor de la Pakedex-->
+    <div class="container">
+        <!--Clase search para buscar el pokemon-->
+        <div class="search">
+            <!--Formulario para la entrada de datos-->
+            <form action="" onsubmit="searchPokemon(event)">
+                <input class="inputCenter" type="text" name="pokemon" autocomplete="off" placeholder="Pokemon name " maxlength="15"> 
+            </form>
+        </div>
+
+        <!--Clase title que mostrará al principio "Pokedex" después el nombre del pokemon y en caso de encontrarlo "No encontrado"-->
+        <div  class="title">
+            <div data-poke-name class="titleCenter"> Pokedex</div>
+        </div>
+
+        <!--Contenedor de la imágen-->
+        <div class="picture">
+            <div data-poke-img-container class="img-container">
+                <img data-poke-img class="poke-img" src="./images/pokemon.png"/>
+            </div>
+        </div>
+        
+        <!--Contenedor para el número del pokemon-->
+        <div class="number">
+                <div data-poke-id class="numberCenter"></div>
+        </div>
+
+        <!--Contenedor para los botones que no harán nada, de momento-->
+        <div class="buttons">
+            <a href="#">
+                <img src="./images/left.png" alt="left" class="left">
+            </a>
+            <a href="#">
+                <img src="./images/right.png" alt="right" class="right">
+            </a>
+        </div>
+
+        <!--Contenedor del área de información más detallada-->
+        <div class="container2">
+
+            <!--Contenedor para mostrar la palabra type-->
+            <div class="subType">
+                <p>Type</p>
+            </div>
+
+            <!--Rellenamos este contenedor con la información retornada la API de Pokemon-->
+            <div class="type">
+                <div data-poke-types class="typeCenter"></div>
+            </div>
+
+            <!--Contenedor para mostrar la palabra Statistica-->
+            <div class="subStatistics">
+                <p>Statistics</p>
+            </div>
+            <!--Contenedor para mostrar la palabra Movements-->
+            <div class="subMovements">
+                <p>Movements</p>
+            </div>
+
+            <!--Rellenamos este contenedor con la información retornada la API de Pokemon-->
+            <div class="statistics">
+                <div data-poke-stats class="alignStatistics"></div>
+            </div>
+
+            <!--Rellenamos este contenedor con la información retornada la API de Pokemon-->
+            <div class="movements">
+                <div data-poke-moves class="alignMovements"></div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
